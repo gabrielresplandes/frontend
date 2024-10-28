@@ -5,7 +5,14 @@ Algoritmo "PetPlace"
 
 Var
 opcao : caractere
-valorTotal : inteiro
+valorTotal : real
+
+procedimento adicionarAoCarrinho(vp : real)
+   VAR
+   nomep : caractere
+   INICIO
+   escreval("Digite o nome do produto: ")
+   leia(nomep)
    escreval("Item ",nomep," adicionado")
    escreval("Item adicionado! ")
    valorTotal <- valorTotal + vp
