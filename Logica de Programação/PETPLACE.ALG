@@ -6,6 +6,12 @@ Algoritmo "PetPlace"
 Var
 opcao : caractere
 valorTotal : inteiro
+   escreval("Item ",nomep," adicionado")
+   escreval("Item adicionado! ")
+   valorTotal <- valorTotal + vp
+   escreval("Valor total do carrinho R$ :",valorTotal)
+   
+fimProcedimento
 
 Inicio
 escreval("********catalogo*********")
@@ -21,29 +27,19 @@ leia(opcao)
 //switch / case
 escolha(opcao)
    caso "1"
-   escreval("Item RACAO PREMIER 10KG X 1 adicionado! ")
-   valorTotal <- valorTotal + 140
-   escreval("Valor total do carrinho: R$",valorTotal)
+   adicionarAoCarrinho(140)
    
    caso "2"
-   escreval("Item COLEIRA PEITORAL 2M X 1 adicionado!")
-   valorTotal <- valorTotal + 27,49
-   escreval("Valor total do carrinho: R$",valorTotal)
+   adicionarAoCarrinho(27)
    
    caso "3"
-   escreval("Item CASA DE TRANSPORTE X 1 adicionado!")
-   valorTotal <- valorTotal + 120,00
-   escreval("Valor total do carrinho: R$",valorTotal)
+   adicionarAoCarrinho(120)
    
    caso "4"
-   escreval("Item PETISCOS DOGPET 300G X 1 adicionado!")
-   valorTotal <- valorTotal + 12,00
-   escreval("Valor total do carrinho: R$",valorTotal)
+   adicionarAoCarrinho(12)
    
    caso "5"
-   escreval("Item TAPETE HIGIENICO X 1 adicionado!")
-   valorTotal <- valorTotal + 45,00
-   escreval("Valor total do carrinho: R$",valorTotal)
+   adicionarAoCarrinho(45)
    
    caso "6"
    escreval("Compra Cancelada!")
