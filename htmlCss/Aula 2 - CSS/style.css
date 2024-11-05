@@ -1,0 +1,9 @@
+h2{
+    font-size: 25pt;
+}
+
+img{
+    width: 950px;
+    border-radius: 100%;
+    border: 5px solid black;
+}
