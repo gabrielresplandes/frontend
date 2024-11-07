@@ -10,7 +10,7 @@ body{
 header, footer{
     width: 100%;
     padding: 20px 0px;
-    background-color: rgb(255, 197, 8);
+    background-color: rgb(252, 212, 82);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -38,11 +38,21 @@ nav a{
     background-size: cover;
     background-position: bottom;
     margin: 20px auto;
-    text-align: center;
     line-height: 300px;
 }
 
+#promo-text {
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
 footer{
+    background-color: #4CAF50;
     position:absolute;
     bottom: 0%;
 }
+
