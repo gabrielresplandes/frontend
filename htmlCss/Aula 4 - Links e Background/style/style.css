@@ -1,0 +1,48 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    background-color: rgb(129, 243, 243);
+}
+
+header, footer{
+    width: 100%;
+    padding: 20px 0px;
+    background-color: rgb(255, 197, 8);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1{
+    float: left;
+    margin-left: 18px;
+}
+
+nav{
+    float: right ;
+    margin-right: 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+#banner{
+    width: 80%;
+    height: 300px;
+    background-image: url(../images/jpg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 300px;
+}
+
+footer{
+    position:absolute;
+    bottom: 0%;
+}
