@@ -84,12 +84,11 @@ main {
     line-height: 1.6;
 }
 
-/* Rodapé */
 footer {
     background-color: #ff7043;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -99,4 +98,3 @@ footer p {
     margin: 5px 0;
     font-size: 1em;
 }
-
