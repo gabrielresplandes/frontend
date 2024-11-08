@@ -1,58 +1,73 @@
-*{
-    padding: 0%;
-    margin: 0%;
+/* Reset de estilo */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(129, 243, 243);
-}
-
-header, footer{
-    width: 100%;
-    padding: 20px 0px;
-    background-color: rgb(252, 212, 82);
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-header h1{
-    float: left;
-    margin-left: 18px;
-}
-
-nav{
-    float: right ;
-    margin-right: 20px;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-}
-
-#banner{
-    width: 80%;
-    height: 300px;
-    background-image: url(../images/jpg1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    margin: 20px auto;
-    line-height: 300px;
-}
-
-#promo-text {
-    width: 80%;
-    text-align: center;
-    margin: 20px auto;
-    font-size: 24px;
-    font-weight: bold;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-footer{
-    background-color: #4CAF50;
-    position:absolute;
-    bottom: 0%;
+header {
+    background-color: rgb(252, 212, 82);
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o banner */
+#banner {
+    width: 100%;
+    height: 300px;  /* A altura pode ser ajustada conforme a necessidade */
+    background-image: url('../images/jpg1.jpg'); /* Caminho para a imagem de fundo */
+    background-repeat: no-repeat;
+    background-size: cover;  /* Faz com que a imagem cubra toda a área do banner */
+    background-position: center center;  /* Garante que a imagem fique centralizada */
+}
+
+/* Estilos para o texto de promoção */
+#promo-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+#promo-text h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FF5722;
+}
+
+/* Estilos gerais da página */
+main {
+    padding: 30px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
