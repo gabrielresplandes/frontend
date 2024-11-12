@@ -12,7 +12,8 @@ body {
 
 header {
     padding: 20px;
-    text-align: right;
+    text-align: center;
+    background-color: #f1f1f1;
 }
 
 nav a {
@@ -22,60 +23,126 @@ nav a {
     font-size: 18px;
 }
 
+/* Banner container ocupando toda a largura */
 .banner-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
 }
 
+/* Configurações específicas para #banner */
 #banner {
-    width: 40%;
-    height: 250px;
+    flex: 0 0 40%;
+    height: 100%;
     background-image: url('images/logo_02.png');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
+    background-position: center;
 }
 
+/* Configurações específicas para #banner2 */
 #banner2 {
-    width: 75%;
-    height: 250px;
+    flex: 0 0 60%;
+    height: 100%;
     background-image: url('images/logo_03.gif');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
+    background-position: center;
 }
 
-#text-pesca{
-    font-size: 70%;
-    margin-left: 40px;
+#text-pesca {
+    font-size: 75%;
+    text-align: left;
+    padding: 10px;
+    background-color: rgb(226, 226, 226);
 }
 
-.text-home{
+/* Layout principal */
+.content {
     display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-column {
+    width: 65%; /* Largura da coluna principal */
+}
+
+.right-column {
+    width: 30%; /* Largura da coluna direita */
+    padding-left: 20px;
+}
+
+/* Estilo para "Serviços" e "Agenda" com tarja preta */
+#text-services h1,
+#agenda h1 {
     background-color: black;
     color: white;
-    justify-content: space-between;
     padding: 10px;
-    margin-top: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
 }
 
-#text-services{
-    font-size: 70%;
-    margin-left: 30px;
+#text-services,
+#site-map {
+    background-color: white;
+    margin-bottom: 20px;
 }
 
-#text-agenda{
-    font-size: 70%;
-    margin-right: 150px;
+/* Estilo específico para os textos dentro da seção "Agenda" */
+#agenda p {
+    font-size: 0.9rem;
+    margin: 10px 0; /* Espaçamento entre cada item */
+}
+
+#site-map ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#site-map ul li {
+    padding: 5px 0;
+}
+
+/* Estilo para os links do "Mapa do Site" */
+#site-map ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#site-map ul li a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
 }
 
 
+/* Rodapé */
 footer {
     text-align: left;
     padding: 10px;
     background-color: black;
     color: white;
-    position: fixed;
-    bottom: 0;
+    font-size: 45%;
     width: 100%;
-    font-size: 40%;
+    margin-top: 20px;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+
+    #banner, #banner2 {
+        width: 100%;
+        height: 150px;
+    }
 }
