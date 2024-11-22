@@ -16,11 +16,20 @@ function testes(){
 //testes()
 
 function carregarCatalogo(){
-    for (let i = 0;i < 30;i++){
+    var livros = [
+        ['images/livro.jpg','O MENINO DO PIJAMA LISTRADO'],
+        ['images/book.jpg','Meu Passado me Condenava'],
+        ['images/marcalbook.jpg','Os Códigos do Milhão - Pablo Marçal'],
+        ['images/marcalbook2.jpg','Como Fazer Um Milhão Antes Dos 20'],
+        ['images/marcalbook3.jpg','Desventuras em Série'],
+        ['images/bolsobook.jpg', 'Mito ou Verdade'],
+        ['images/teslabook.jpg', 'This Is Elon Musk']
+    ]
+    livros.forEach(cadaLivro => {
         document.getElementById('catalogo').innerHTML +=`
         <div class="livro">
-                <img src="images/livro.jpg" alt="">
-                <h4>O menino do pijama listrado</h4>
+                <img src="${cadaLivro[0]}" alt="">
+                <h4>${cadaLivro[1]}</h4>
 
                 <button>
                     Adicionar
@@ -28,7 +37,7 @@ function carregarCatalogo(){
                 </button>
         </div>
         `
-    }
+    })
 }
 
 carregarCatalogo()
