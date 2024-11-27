@@ -30,8 +30,20 @@ header img {
     height: auto;
 }
 
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 h1 {
     font-size: 1.5rem;
+    text-align: left;
 }
 
 p {

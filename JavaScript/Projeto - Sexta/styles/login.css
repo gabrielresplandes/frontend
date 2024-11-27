@@ -7,12 +7,14 @@ body {
   }
   
   .form {
-    background-color: #15172b;
+    background-color:rgb(57, 105, 163);
     border-radius: 20px;
     box-sizing: border-box;
     height: 500px;
     padding: 20px;
     width: 320px;
+    flex-direction: column; /* Alinhamento dos elementos dentro do formulário */
+    align-items: center; /* Centraliza os itens dentro do formulário */
   }
   
   .title {
@@ -59,7 +61,7 @@ body {
   }
   
   .cut {
-    background-color: #15172b;
+    background-color:rgb(57, 105, 163);
     border-radius: 10px;
     height: 20px;
     left: 20px;
@@ -101,7 +103,7 @@ body {
   }
   
   .input:focus ~ .placeholder {
-    color: #dc2f55;
+    color: #ffffff;
   }
   
   .submit {
@@ -122,4 +124,13 @@ body {
   .submit:active {
     background-color: #06b;
   }
+
+
   
+  img {
+    align-items: center;
+    width: 70px;
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Para evitar que a imagem afete o layout */
+    margin-bottom: 20px; /* Se você quiser adicionar algum espaço abaixo da imagem */
+}

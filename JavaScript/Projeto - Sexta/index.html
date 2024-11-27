@@ -1,33 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Hotel Acalp</title>
-    <link rel="stylesheet" href="styles/login.css">
+    <title>Hotel Acapulco - Sua satisfação é nosso prazer!</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="icon" href="images/icons/LOGO-HOTEL.png-16x16.ico">
 </head>
 <body>
-  <div class="form">
-  <div class="title">Bem-Vindo(a) </div>
-  <div class="subtitle">Hotel Acapulco - Intranet</div>
-  <div class="subtitle">Sistema Interno de Cadastro de Reservas</div>
-
-  <div class="input-container ic2">
-
-    <input id="lastname" class="input" type="text" placeholder=" " />
-    <div class="cut"></div>
-    <label for="lastname" class="placeholder">Usuário</label>
+    <header>
+        <img src="images/LOHO HOTEL 0 (1).png" alt="Logo do Hotel">
+        <div class="header-content">
+        <h1>Hotel Acapulco</h1>
     </div>
-
-  <div class="input-container ic2">
-    <input id="email" class="input" type="text" placeholder=" " />
-    <div class="cut cut-short"></div>
-    <label for="email" class="placeholder">Senha</label>
-  </div>
-  <a href="html/cadastroDeReservas.html">
-     <button type="text" class="submit">Acessar</button>
-    </a>
- 
-</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="html/login.html">Intranet</a>
+        <a href="pages/sobreNos.html">Sobre Nós</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Hospede-se nesse final de ano conosco!</h2>
+        <h3>Hospede-se conosco com antecedência e garanta os melhores quartos com os melhores preços!</h3>
+        <div id="catalogo">
+            <div class="produtos-container">
+                <!-- Quarto Standard -->
+                <div class="produto">
+                    <img src="./images/quarto_standard.jpg" alt="Quarto Standard">
+                    <h1>Quarto Standard</h1>
+                    <p>O Quarto Standard oferece um ambiente acolhedor e funcional, perfeito para uma estadia prática e confortável.</p>
+                    <h2>R$150</h2>
+                    <button>VER MAIS</button>
+                </div>
+                <!-- Quarto Premium -->
+                <div class="produto">
+                    <img src="./images/quarto_premium.jpeg" alt="Quarto Premium">
+                    <h1>Quarto Premium</h1>
+                    <p>O Quarto Premium combina conforto aprimorado e elegância, sendo uma escolha ideal para quem busca um pouco mais de sofisticação em sua estadia.</p>
+                    <h2>R$220</h2>
+                    <button>VER MAIS</button>
+                </div>
+                <!-- Quarto Deluxe -->
+                <div class="produto">
+                    <img src="./images/quarto_deluxe.jpeg" alt="Quarto Deluxe">
+                    <h1>Quarto Deluxe</h1>
+                    <p>O Quarto Deluxe oferece uma experiência de conforto e sofisticação com sua decoração elegante e ambiente acolhedor. </p>
+                    <h2>R$350</h2>
+                    <button>VER MAIS</button>
+                </div>
+                <!-- Cobertura Executiva -->
+                <div class="produto">
+                    <img src="./images/cobertura_executiva.jpg" alt="Cobertura Executiva">
+                    <h1>Cobertura Executiva</h1>
+                    <p>Desfrute do máximo em luxo e exclusividade em nossa cobertura executiva, com vista deslumbrante para o mar em um ambiente de alto nível!</p>
+                    <h2>R$520</h2>
+                    <button>VER MAIS</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Hotel Acapulco. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
