@@ -193,30 +193,6 @@
   }
 }
 
-/* Centraliza o carrossel na página */
-#banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Altura igual à tela */
-  margin: 0;
-  padding: 0;
-}
-
-.carousel-inner .carousel-item img {
-  width: auto; /* Define a largura padrão para todas as imagens */
-  height: 500px; /* Define a altura padrão */
-  object-fit: cover; /* Ajusta o conteúdo da imagem para cobrir o espaço sem distorção */
-  margin: 0 auto; /* Centraliza a imagem */
-}
-
-/* Ajusta a largura do carrossel */
-.carousel {
-  width: auto; /* Define uma largura para o carrossel */
-  max-width: 100%; /* Garante que o carrossel não ultrapasse os limites */
-  margin: 0 auto; /* Centraliza o carrossel */
-}
-
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);

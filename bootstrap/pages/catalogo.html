@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATÁLOGO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-light text-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark text-light">
+            <div class="container">
+                <a class="navbar-brand text-light fw-bold" href="../index.html">Nomu</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="catalogo.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../pages/carrinho.html">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Perfil</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Procurar produto" aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <!-- Seção de botões -->
+        <section id="botoesDrinks" class="text-center mb-5">
+            <h2 class="text-uppercase fw-bold mb-4">Drinks de A a Z</h2>
+            <div class="row gx-2 gy-2 justify-content-center" id="alfabetoButtons">
+                <!-- Botões serão gerados dinamicamente aqui -->
+            </div>
+            <h2 class="text-uppercase fw-bold mt-5 mb-3">Drink Aleatório</h2>
+            <button class="btn btn-success" onclick="drinkAleatorio()">Drink Aleatório</button>
+        </section>
+
+        <!-- Seção de pesquisa -->
+        <section id="pesquisarDrinks" class="text-center mb-5">
+            <h2 class="text-uppercase fw-bold mb-4">Pesquisar Drink</h2>
+            <div class="input-group w-50 mx-auto">
+                <input type="text" id="pesquisar" class="form-control" placeholder="Digite o nome do drink">
+                <button id="buscarBtn" class="btn btn-outline-secondary" onclick="buscarDrink()">Buscar</button>
+            </div>
+        </section>
+
+        <!-- Seção de resultados -->
+        <section id="resultados" class="text-center">
+            <h2 class="text-uppercase fw-bold">Resultados</h2>
+            <div class="mt-4 p-3 bg-white shadow-sm rounded" id="resultadosContainer">
+                <!-- Resultados dinâmicos -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p class="mb-0">© 2024 Nomu. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../scripts/buscaDrinks.js"></script>
+</body>
+</html>
