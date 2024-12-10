@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Filmes</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Banner -->
+  <header class="banner">
+    <div class="overlay">
+      <h1 class="text-center text-white">CineWorld</h1>
+    </div>
+  </header>  
+
+  <!-- Lista de Filmes -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Lista de Filmes</h2>
+    <div class="row">
+      <!-- Filme 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/cartazmissao.jpg" class="card-img-top" alt="Missão Impossível">
+          <div class="card-body">
+            <h5 class="card-title">Missão Impossível 7: Acerto de Contas Parte 1</h5>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#missaoimpossivelModal">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+      <!-- Filme 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/cartazinception.jpg" class="card-img-top" alt="Inception">
+          <div class="card-body">
+            <h5 class="card-title">Inception</h5>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inceptionModal">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+      <!-- Filme 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/hereditario.jpg" class="card-img-top" alt="Hereditário">
+          <div class="card-body">
+            <h5 class="card-title">Hereditário</h5>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hereditarioModal">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal - Missão Impossível -->
+  <div class="modal fade" id="missaoimpossivelModal" tabindex="-1" aria-labelledby="missaoimpossivelModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="missaoimpossivelModalLabel">Missão Impossível 7: Acerto de Contas Parte 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Ethan Hunt (Tom Cruise) e a equipe do IMF formada por Ilsa Faust (Rebecca Ferguson), Benji Dunn (Simon Pegg) e Luther Stickell (Ving Rhames) recebem outra importante missão: eles devem rastrear uma nova e aterrorizante arma que, se cair nas mãos erradas, pode representar uma ameaça para toda a humanidade. Com o controle do futuro e o destino de todo o mundo em jogo, a equipe precisa partir em uma corrida frenética e mortal ao redor do planeta. Além disso, Ethan ainda é confrontado por um novo inimigo misterioso e muito perigoso, e é forçado a aceitar que, para completar o desafio, nada pode importar mais do que a missão – nem mesmo sua própria vida.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal - Inception -->
+  <div class="modal fade" id="inceptionModal" tabindex="-1" aria-labelledby="inceptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="inceptionModalLabel">Inception</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Um ladrão que rouba segredos corporativos através do uso de tecnologia de compartilhamento de sonhos é desafiado a plantar uma ideia em vez de roubá-la. Uma obra-prima de ficção científica cheia de camadas e reviravoltas.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal - Hereditário -->
+  <div class="modal fade" id="hereditarioModal" tabindex="-1" aria-labelledby="hereditarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="hereditarioModalLabel">Hereditário</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Quando sua mãe - que sofria de distúrbios mentais - falece, Annie (Toni Collette), seu marido (Gabriel Byrne), filho (Alex Wolff) e filha (Milly Shapiro) lamentam sua perda. Todavia, após a morte da reclusa avó, a família Graham começa a desvendar algumas coisas. A família recorre a diferentes meios para lidar com sua dor, incluindo Annie e sua filha flertando com o sobrenatural. Mesmo após a partida da matriarca, ela permanece como se fosse um sombra sobre a família, especialmente sobre a solitária neta adolescente, Charlie, por quem ela sempre manteve uma fascinação não usual. Com um crescente terror tomando conta da casa, a família explora lugares mais obscuros para escapar do infeliz destino que herdaram. Cada um deles começa a ter experiências perturbadoras e sobrenaturais ligadas aos segredos sinistros e traumas emocionais que passaram pelas gerações de sua família.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
