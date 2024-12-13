@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco XYZ - Sistema de Empréstimos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home" id="nav-home">Home</a></li>
+            <li><a href="#about" id="nav-about">Sobre Nós</a></li>
+            <li><a href="#login" id="nav-login">Acessar Sistema</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <h1>Bem-vindo ao Banco XYZ</h1>
+        <p>Somos especialistas em empréstimos personalizados para você!</p>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" class="page">
+        <h1>Sobre Nós</h1>
+        <p>O Banco XYZ está comprometido em fornecer soluções financeiras acessíveis e confiáveis. Com mais de 20 anos de experiência, somos líderes no setor de empréstimos.</p>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <h1>Acessar Sistema</h1>
+        <form id="login-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" placeholder="Digite seu usuário" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <!-- Loan Management Page -->
+    <div id="loan-management-page" class="page">
+        <h1>Gerenciamento de Empréstimos</h1>
+        <form id="loan-form">
+            <input type="text" id="client-name" placeholder="Nome do Cliente" required>
+            <input type="number" id="loan-amount" placeholder="Valor do Empréstimo" required>
+            <input type="date" id="loan-date" placeholder="Data do Empréstimo" required>
+            <textarea id="loan-notes" placeholder="Observações"></textarea>
+            <button type="submit">Adicionar Empréstimo</button>
+        </form>
+        <ul id="loan-list">
+            <!-- Loans will be listed here -->
+        </ul>
+        <button id="logout-button">Sair</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

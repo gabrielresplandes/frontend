@@ -1,0 +1,16 @@
+{
+    "usuarios":[
+        {
+            "nome" : "Gabriel Kroos",
+            "cpf" : "99999999999",
+            "senha" : "1234",
+            "cidade" : "Tangamandapio"
+        },
+        {
+            "nome" : "Renato Cariri",
+            "cpf" : "77777777777",
+            "senha" : "5678",
+            "cidade" : "Eu quero, eu posso"
+        }
+    ]
+}
