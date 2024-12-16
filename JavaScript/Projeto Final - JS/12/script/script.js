@@ -1,87 +1,58 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const pages = document.querySelectorAll('.page');
-    const navLinks = document.querySelectorAll('nav ul li a');
-    const loginForm = document.getElementById('login-form');
-    const loanForm = document.getElementById('loan-form');
-    const loanList = document.getElementById('loan-list');
-    const logoutButton = document.getElementById('logout-button');
+// Login System
+document.getElementById('login-btn').addEventListener('click', () => {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-    const validCredentials = {
-        username: 'admin',
-        password: '1234',
-    };
+    if (username === 'admin' && password === '1234') {
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('loan-section').style.display = 'block';
+    } else {
+        alert('Usuário ou senha incorretos!');
+    }
+});
 
-    const loans = JSON.parse(localStorage.getItem('loans')) || [];
-
-    const showPage = (pageId) => {
-        pages.forEach(page => page.classList.remove('active'));
-        document.getElementById(pageId).classList.add('active');
-    };
-
-    const renderLoans = () => {
-        loanList.innerHTML = '';
-        loans.forEach((loan, index) => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <strong>${loan.clientName}</strong><br>
-                Valor: R$${loan.amount.toFixed(2)}<br>
-                Data: ${loan.date}<br>
-                Observações: ${loan.notes}<br>
-                <button class="delete-loan" data-index="${index}">Excluir</button>
-            `;
-            loanList.appendChild(li);
-        });
-    };
-
-    const saveLoans = () => {
-        localStorage.setItem('loans', JSON.stringify(loans));
-        renderLoans();
-    };
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const pageId = e.target.getAttribute('href').replace('#', '') + '-page';
-            showPage(pageId);
-        });
-    });
-
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        if (username === validCredentials.username && password === validCredentials.password) {
-            showPage('loan-management-page');
-        } else {
-            alert('Usuário ou senha inválidos.');
+// Prevent negative or zero values in numeric fields
+document.querySelectorAll('input[type="number"]').forEach((input) => {
+    input.addEventListener('input', () => {
+        if (parseFloat(input.value) < 1 || isNaN(parseFloat(input.value))) {
+            input.value = ''; // Reseta o valor se for inválido
         }
     });
+});
 
-    loanForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const clientName = document.getElementById('client-name').value;
-        const amount = parseFloat(document.getElementById('loan-amount').value);
-        const date = document.getElementById('loan-date').value;
-        const notes = document.getElementById('loan-notes').value;
+// Loan Simulation
+document.getElementById('simulate-btn').addEventListener('click', () => {
+    const clientName = document.getElementById('client-name').value.trim();
+    const loanAmount = parseFloat(document.getElementById('loan-amount').value);
+    const interestRate = parseFloat(document.getElementById('interest-rate').value) / 100;
+    const loanTerm = parseInt(document.getElementById('loan-term').value);
 
-        loans.push({ clientName, amount, date, notes });
-        saveLoans();
+    if (!clientName) {
+        alert('O nome do cliente não pode ficar em branco.');
+        return;
+    }
+    if (isNaN(loanAmount) || loanAmount <= 0) {
+        alert('O valor do empréstimo deve ser um número positivo.');
+        return;
+    }
+    if (isNaN(interestRate) || interestRate <= 0) {
+        alert('A taxa de juros deve ser um número positivo.');
+        return;
+    }
+    if (isNaN(loanTerm) || loanTerm <= 0) {
+        alert('O prazo deve ser um número positivo.');
+        return;
+    }
 
-        loanForm.reset();
-    });
+    const monthlyRate = interestRate;
+    const monthlyPayment = (loanAmount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -loanTerm));
+    const totalPayment = monthlyPayment * loanTerm;
+    const totalInterest = totalPayment - loanAmount;
 
-    loanList.addEventListener('click', (e) => {
-        if (e.target.classList.contains('delete-loan')) {
-            const index = e.target.getAttribute('data-index');
-            loans.splice(index, 1);
-            saveLoans();
-        }
-    });
+    document.getElementById('result-client-name').textContent = clientName;
+    document.getElementById('result-monthly-payment').textContent = monthlyPayment.toFixed(2);
+    document.getElementById('result-total-payment').textContent = totalPayment.toFixed(2);
+    document.getElementById('result-total-interest').textContent = totalInterest.toFixed(2);
 
-    logoutButton.addEventListener('click', () => {
-        showPage('login-page');
-    });
-
-    renderLoans();
+    document.getElementById('simulation-result').style.display = 'block';
 });
