@@ -51,7 +51,7 @@ nav ul li a:hover {
     margin-right: 0; /* Remove margem extra */
     transform: translateY(5px); /* Move a logo para baixo */
 }
-    
+
 .page {
     max-width: 800px;
     margin: 50px auto;
@@ -106,4 +106,8 @@ footer {
     padding: 10px 0;
     text-align: center;
     margin-top: auto; /* Empurra o footer para o rodapé */
+}
+
+footer p {
+    margin: 0;
 }
