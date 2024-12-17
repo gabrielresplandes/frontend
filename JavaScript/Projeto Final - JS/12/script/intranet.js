@@ -1,16 +1,3 @@
-// Login System
-document.getElementById('login-btn').addEventListener('click', () => {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    if (username === 'admin' && password === '1234') {
-        document.getElementById('login-section').style.display = 'none';
-        document.getElementById('loan-section').style.display = 'block';
-    } else {
-        alert('Usuário ou senha incorretos!');
-    }
-});
-
 // Prevent negative or zero values in numeric fields
 document.querySelectorAll('input[type="number"]').forEach((input) => {
     input.addEventListener('input', () => {
@@ -55,4 +42,19 @@ document.getElementById('simulate-btn').addEventListener('click', () => {
     document.getElementById('result-total-interest').textContent = totalInterest.toFixed(2);
 
     document.getElementById('simulation-result').style.display = 'block';
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+    if (!isLoggedIn) {
+        alert("Você precisa estar logado para acessar esta página.");
+        window.location.href = "login.html"; // Redireciona para o login se não estiver logado
+    }
+
+    // Evento de Logout
+    document.getElementById("logout-btn").addEventListener("click", () => {
+        sessionStorage.removeItem("isLoggedIn"); // Remove o status de login
+        alert("Logout realizado com sucesso. Redirecionando para a página inicial...");
+        window.location.href = "index.html"; // Redireciona para a home
+    });
 });

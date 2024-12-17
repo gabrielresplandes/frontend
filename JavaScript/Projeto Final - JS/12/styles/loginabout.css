@@ -33,6 +33,19 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.navbar-login {
+    display: flex;
+    align-items: center; /* Alinha a logo verticalmente no centro */
+    height: 40px; /* Define uma altura fixa para a navbar */
+    gap: 5px; /* Reduz a distância entre a logo e o texto */
+}
+
+.navbar-login img {
+    max-height: 70px; /* Garante que a imagem se ajuste à altura da navbar */
+    margin-right: 0; /* Remove margem extra */
+    transform: translateY(5px); /* Move a logo para baixo */
+}
+
 .page {
     max-width: 800px;
     margin: 50px auto;
