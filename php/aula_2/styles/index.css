@@ -1,0 +1,15 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgPrimario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
