@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Empréstimos</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de Empréstimos</h1>
+        <div class="form">
+            <div>
+                <label for="name">Nome do Cliente</label>
+                <input type="text" id="name" placeholder="Nome do Cliente">
+            </div>
+        
+            <div>
+                <label for="amount">Valor</label>
+                <input type="number" id="amount" placeholder="Valor">
+            </div>
+        
+            <div>
+                <label for="interest">Juros (%)</label>
+                <input type="number" id="interest" placeholder="Juros (%)">
+            </div>
+        
+            <div>
+                <label for="loanDate">Data do Empréstimo</label>
+                <input type="date" id="loanDate">
+            </div>
+        
+            <div>
+                <label for="dueDate">Data de Pagamento</label>
+                <input type="date" id="dueDate">
+            </div>
+        
+            <div>
+                <label for="paymentMethod">Meio de Pagamento</label>
+                <select id="paymentMethod">
+                    <option value="">Selecione o meio de pagamento</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Em Mãos">Em Mãos</option>
+                    <option value="Transferência">Transferência</option>
+                </select>
+            </div>
+        
+            <div>
+                <label for="paymentType">Tipo de Pagamento</label>
+                <select id="paymentType">
+                    <option value="single">Pagamento único</option>
+                    <option value="installments">Parcelado</option>
+                </select>
+            </div>
+        
+            <div>
+                <label for="months">Número de Meses</label>
+                <input type="number" id="months" placeholder="Meses" style="display: none;">
+            </div>
+        
+            <button class="full-width" onclick="addLoan()">Registrar Empréstimo</button>
+        </div>                
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Valor</th>
+                    <th>Juros (%)</th>
+                    <th>Parcelas</th>
+                    <th>Total a Pagar</th>
+                    <th>Sinal</th>
+                    <th>Data do Empréstimo</th>
+                    <th>Data de Pagamento</th>
+                    <th>Meio de Pagamento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="loanList"></tbody>
+        </table>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
