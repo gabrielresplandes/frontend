@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.produto-card {
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.carrinho-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.carrinho {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho-acoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.carrinho h4 {
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.carrinho .list-group-item {
+    transition: background-color 0.3s ease;
+}
+
+.carrinho .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.badge-danger {
+    font-size: 0.75rem;
+}
