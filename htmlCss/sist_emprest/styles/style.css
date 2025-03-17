@@ -8,6 +8,7 @@ body {
     align-items: flex-start;
     height: 100vh;
     overflow-y: auto;
+    color: #333;
 }
 
 .container {
@@ -15,18 +16,18 @@ body {
     max-width: 750px;
     background: white;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     margin-top: 20px;
 }
 
 h1 {
     text-align: center;
-    font-size: 22px;
+    font-size: 26px;
     margin-bottom: 15px;
+    color: #333;
 }
 
-/* Melhor estruturação do formulário */
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -46,21 +47,26 @@ h1 {
     grid-column: span 2;
 }
 
-/* Inputs e selects com aparência mais organizada */
 .form input, .form select {
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
     font-size: 14px;
+    background: white;
+    color: #333;
+    outline: none;
 }
 
-/* Melhor posicionamento do botão */
+.form input::placeholder {
+    color: #999;
+}
+
 button {
     background-color: #28a745;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -74,20 +80,45 @@ button:hover {
     background-color: #218838;
 }
 
-/* Tabela mais compacta */
+.summary {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.summary p {
+    font-size: 16px;
+    color: #333;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
     font-size: 14px;
+    background: white;
+    border-radius: 10px;
+    overflow-x: auto;
+    display: block;
 }
 
 table, th, td {
     border: 1px solid #ccc;
+    color: #333;
+    white-space: nowrap;
 }
 
 th, td {
-    padding: 8px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -96,10 +127,9 @@ th {
     color: white;
 }
 
-/* Botão de exclusão menor */
 .delete-btn {
     background-color: #dc3545;
-    padding: 5px 8px;
+    padding: 8px 10px;
     border: none;
     color: white;
     border-radius: 5px;
@@ -112,13 +142,16 @@ th {
     background-color: #c82333;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 600px) {
     .form {
         grid-template-columns: 1fr;
     }
-    
     button {
         grid-column: span 1;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }

@@ -8,58 +8,56 @@
 </head>
 <body>
     <div class="container">
-        <h1>Gerenciamento de Empréstimos</h1>
+        <h1>📌 Gerenciamento de Empréstimos 💰</h1>
         <div class="form">
             <div>
                 <label for="name">Nome do Cliente</label>
-                <input type="text" id="name" placeholder="Nome do Cliente">
+                <input type="text" id="name" placeholder="Digite o nome do cliente">
             </div>
-        
             <div>
-                <label for="amount">Valor</label>
-                <input type="number" id="amount" placeholder="Valor">
+                <label for="amount">Valor (R$)</label>
+                <input type="number" id="amount" placeholder="Informe o valor">
             </div>
-        
             <div>
                 <label for="interest">Juros (%)</label>
-                <input type="number" id="interest" placeholder="Juros (%)">
+                <input type="number" id="interest" placeholder="% de juros">
             </div>
-        
             <div>
                 <label for="loanDate">Data do Empréstimo</label>
                 <input type="date" id="loanDate">
             </div>
-        
             <div>
                 <label for="dueDate">Data de Pagamento</label>
                 <input type="date" id="dueDate">
             </div>
-        
             <div>
                 <label for="paymentMethod">Meio de Pagamento</label>
                 <select id="paymentMethod">
-                    <option value="">Selecione o meio de pagamento</option>
+                    <option value="">Selecione...</option>
                     <option value="Pix">Pix</option>
                     <option value="Em Mãos">Em Mãos</option>
                     <option value="Transferência">Transferência</option>
                 </select>
             </div>
-        
             <div>
                 <label for="paymentType">Tipo de Pagamento</label>
                 <select id="paymentType">
-                    <option value="single">Pagamento único</option>
+                    <option value="single">Pagamento Único</option>
                     <option value="installments">Parcelado</option>
                 </select>
             </div>
-        
-            <div>
+            <div id="monthsContainer">
                 <label for="months">Número de Meses</label>
-                <input type="number" id="months" placeholder="Meses" style="display: none;">
+                <input type="number" id="months" placeholder="Informe os meses">
             </div>
-        
-            <button class="full-width" onclick="addLoan()">Registrar Empréstimo</button>
-        </div>                
+            <button class="full-width" onclick="addLoan()">📌 Registrar Empréstimo</button>
+        </div>  
+
+        <div class="summary">
+            <h2>📊 Resumo Financeiro</h2>
+            <p><strong>Total Emprestado:</strong> <span id="totalLoaned">R$ 0,00</span></p>
+            <p><strong>Total a Receber:</strong> <span id="totalReceivable">R$ 0,00</span></p>
+        </div>
 
         <table>
             <thead>
