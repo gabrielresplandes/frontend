@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #1e1e2f, #0d0d1a);
+  color: #e0e0e0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #1a1a2e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #00f7ff;
+  margin-bottom: 30px;
+}
+
+form label {
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #444;
+  border-radius: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background: #2a2a3d;
+  color: #fff;
+  transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #00f7ff;
+  outline: none;
+}
+
+form button, a button {
+  background: #00d4ff;
+  color: #000;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00d4ff;
+  transition: background 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+}
+
+form button:hover, a button:hover {
+  background: #00a6cc;
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+.livro-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #252539;
+  border-left: 4px solid #00f7ff;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.livro-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+}
+
+.livro-container img {
+  width: 140px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.info {
+  flex: 1;
+}
+
+.info h3 {
+  color: #00f7ff;
+  margin-top: 0;
+}
+
+.info p {
+  margin: 10px 0;
+}
+
+.info a {
+  color: #00f7ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
